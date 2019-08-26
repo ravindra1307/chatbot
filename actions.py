@@ -12,7 +12,7 @@ class action_search_jobs(Action):
         conn = sqlite3.connect('job_data.db')     
         cuisine = tracker.get_slot('skills')
         cuisine = cuisine.replace(' ',',')
-
+        
         if ',' in cuisine:
                result = [x.strip() for x in cuisine.split(',')]
       
