@@ -21,24 +21,22 @@
 - heyyy
 - hello bot
 - hi bot
-
-## out_of_context
 - wtf
 - WTF
 - what the fuck
 - what the f**k
-- F*uck
-- F*uck you
-- Fucker
+- f*uck
+- f*uck you
+- fucker
 - You suck
-- I hate you
+- i hate you
 - idiot
-- STFU
-- Shut the f***  up
+- stfu
+- shut the f***  up
 - f*uk
 - f**k
-
-
+- fuck
+- wtf?
 
 
 ## regex:date
@@ -46,16 +44,32 @@
 
 
 ## intent: set job slots
-- company [tcs](company) job [system engineer](job)
-- company [amazon](company) job [ml engineer](job)
-- company [cisco](company) job [network manager](job)
-- company [microsoft](company) job [product manager](job)
-- company [google](company) job [data scientist](job)
-- company [nvidia](company) job [product engineer](job)
-- company [analysed](company) job [hr manager](job)
-- company [asus](company) job [analyst](job)
-- company [dell](company) job [network administrator](job)
-- company [cognizant](company) job [data analyst](job)
+- company [tcs](company) position [system engineer](job)
+- company [amazon](company) position [ml engineer](job)
+- company [cisco](company) position [network manager](job)
+- company [microsoft](company) position [product manager](job)
+- company [google](company) position [data scientist](job)
+- company [nvidia](company) position [product engineer](job)
+- company [analysed](company) position [hr manager](job)
+- company [asus](company) position [analyst](job)
+- company [dell](company) position [network administrator](job)
+- company [cognizant](company) position [data analyst](job)
+- company [cleartrail](company) position [developer](job)
+- company [impetus](company) position [testing](job)
+- company [klera](company) position [analyst](job)
+
+## intent: more
+- Show more
+- Show more
+- show more
+- show more
+
+## intent: previous
+- Show previous jobs
+- Show previous jobs
+- show previous jobs
+- show previous jobs
+
 
 ## intent: questions
 - what is [development](faq)
@@ -649,6 +663,16 @@
 - i know [c and java](skills)
 - i am good in [java and python](skills)
 - i know [python and machine learning](skills)
+- i know [java](skills)
+- i know [c](skills)
+- i know [python](skills)
+- i know [c++](skills)
+- i know [machine learning](skills)
+- [java](skills)
+- [c](skills)
+- [python](skills)
+- [c++](skills)
+- [machine learning](skills)
 
 
 ## intent: application_status
@@ -667,6 +691,9 @@
 ## intent: experience
 - what is minimum experience required
 - what is the job experience required
+- what is the experience required
+- what is required experience
+- experience required
 - any job experience necessary
 - minimum workex necessary
 - minimum work experience required
@@ -926,13 +953,17 @@
 ## intent: company_job_time
 - Is it day shift or night shift ?
 - what is the timing of job
-- how long should i work everydaya
+- how long should i work everyday
 - is it day shift or night shift
 - What's the timings of job
 - How long should I work everyday
 - Is it day shift or night shift ?
 - what is the timing of job
-- how long should i work everydaya
+- timing of job
+- job timing
+- what is job timing
+- how long should i have to work everyday
+- how long should i work everyday
 - is it day shift or night shift
 
 ## intent: interview_success

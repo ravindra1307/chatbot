@@ -1,42 +1,41 @@
 ## questions 1
 * greet
-  - utter_greet
+  - action_greet
 * questions{"faq":"NASA"}
  - action_questions
  - action_restarting
 
 ## questions 2
 * greet
-  - utter_greet
+  - action_greet
 * questions{"faq":"CS"}
  - action_questions
  - action_restarting
  
  ## questions 3
 * greet
-  - utter_greet
+  - action_greet
 * questions{"faq":"CA"}
  - action_questions
  - action_restarting
  
  ## questions 4
 * greet
-  - utter_greet
+  - action_greet
 * questions{"faq":"MBA"}
  - action_questions
  - action_restarting
  
  ## questions 5
 * greet
-  - utter_greet
+  - action_greet
 * questions{"faq":"ARC"}
  - action_questions
  - action_restarting
 
-
 ## think path
 * greet
-  - utter_greet
+  - action_greet
 * think
   - utter_think
   - utter_did_that_help
@@ -61,11 +60,11 @@
 * goodbye
   - utter_goodbye
   - action_restarting
- 
-  
+
+
 ## job path
 * greet
-  - utter_greet	
+  - action_greet	
 * skills_job{"company": "amazon"}
   - action_skills
   - utter_did_that_help
@@ -77,7 +76,7 @@
 
 ## job path 1
 * greet
-  - utter_greet
+  - action_greet
 * skills_job{"job": "ml engineer"}
   - action_skills
   - utter_did_that_help
@@ -87,10 +86,312 @@
   - utter_goodbye
   - action_restarting
   
+## job profile more without 0
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* set job slots{"company": "infosys","job": "machine learning engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting  
+  
+  
+  ## job profile more path 1
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c,c++ and java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* set job slots{"company": "microsoft","job": "product manager"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile more path 2
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"ml,deep learning"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* set job slots{"company": "amazon","job": "ml engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile more path 3
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"android java and python"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* set job slots{"company": "tcs","job": "system engineer"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile more path 4
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c and java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* set job slots{"company": "tcs","job": "system engineer"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile more path 5
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c++ and python"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+
+* set job slots
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+  
+## job profile previous without 0
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs
+* set job slots{"company": "infosys","job": "machine learning engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting  
+  
+  
+## job profile previous path 1
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c,c++ and java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs  
+* set job slots{"company": "microsoft","job": "product manager"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile previous path 2
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"ml,deep learning"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs
+* set job slots{"company": "amazon","job": "ml engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile previous path 3
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"android java and python"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs
+* set job slots{"company": "tcs","job": "system engineer"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile previous path 4
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c and java"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs
+* set job slots{"company": "tcs","job": "system engineer"}
+  - action_search_job_desc
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile previous path 5
+* greet
+  - action_greet
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"c++ and python"}
+  - action_search_jobs
+* more
+  - action_search_jobs_more
+* previous
+  - action_search_jobs
+* set job slots
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+ 
+  
+## job profile without 0
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"java"}
+  - action_search_jobs
+* set job slots{"company": "infosys","job": "machine learning engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
+* experience
+  - action_search_exp
+* affirm OR thanks
+  - utter_gratitude
+* goodbye
+  - utter_goodbye 
+  - action_restarting
+
+## job profile without 1
+* job_profile
+  - utter_ask_skills
+* my_skills{"skills":"java"}
+  - action_search_jobs
+* set job slots{"company": "infosys","job": "machine learning engineer"}
+  - action_search_job_desc
+* salary
+  - action_search_salary
+* goodbye
+  - utter_goodbye 
+  - action_restarting  
+  
   
 ## job profile path 0
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"java,c,c++"}
@@ -99,6 +400,10 @@
   - action_search_job_desc
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
 * experience
   - action_search_exp
 * affirm OR thanks
@@ -109,7 +414,7 @@
 
 ## job profile path 1
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c,c++ and java"}
@@ -126,7 +431,7 @@
 
 ## job profile path 2
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml,deep learning"}
@@ -135,6 +440,8 @@
   - action_search_job_desc
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -143,7 +450,7 @@
 
 ## job profile path 3
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"android java and python"}
@@ -154,6 +461,8 @@
   - action_search_exp
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -162,7 +471,7 @@
 
 ## job profile path 4
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c and java"}
@@ -179,7 +488,7 @@
 
 ## job profile path 5
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++ and python"}
@@ -188,6 +497,8 @@
   - action_search_job_desc
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -196,7 +507,7 @@
 
 ## job profile path 6
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++,python and android"}
@@ -211,7 +522,7 @@
 
 ## job profile path 7
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml , python deep learning"}
@@ -226,7 +537,7 @@
 
 ## job profile path 8
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ruby,python and scripting"}
@@ -236,7 +547,7 @@
 
 ## job profile path 9
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"excel,word"}
@@ -246,7 +557,7 @@
 
 ## job profile path 10
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ui,ux,angular"}
@@ -256,7 +567,7 @@
 
 ## job profile path 11
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"python,ruby and perl"}
@@ -266,7 +577,7 @@
 
 ## company address path 0
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"location": "bhopal","company": "google"}
   - action_search_address
   - utter_did_that_help
@@ -279,7 +590,7 @@
 
 ## company address path 1
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "microsoft"}
   - action_search_address
   - utter_did_that_help
@@ -291,7 +602,7 @@
 
 ## company address path 2
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "tcs","location": "mumbai"}
   - action_search_address
   - utter_did_that_help
@@ -303,7 +614,7 @@
   
 ## company address path 3
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "nvidia"}
   - action_search_address
   - utter_did_that_help
@@ -315,7 +626,7 @@
 
 ## interview round path
 * greet
-  - utter_greet
+  - action_greet
 * interview_round{"company": "tata"}
   - utter_interview_round
   - utter_did_that_help
@@ -328,7 +639,7 @@
 
 ## application path
 * greet
-  - utter_greet
+  - action_greet
 * application_status
   - utter_application
   - utter_did_that_help
@@ -341,7 +652,7 @@
 
 ## interview document path
 * greet
-  - utter_greet
+  - action_greet
 * interview_document
   - utter_interview_document
   - utter_did_that_help
@@ -353,7 +664,7 @@
 
 ## stupid question path
 * greet
-  - utter_greet
+  - action_greet
 * stupid
   - utter_stupid_question
   - utter_did_that_help
@@ -366,7 +677,7 @@
   
 ## holidays
 * greet
-  - utter_greet
+  - action_greet
 * holidays
   - utter_holidays
   - utter_did_that_help
@@ -379,7 +690,7 @@
 
 ## user ideal path
 * greet
-  - utter_greet
+  - action_greet
 * user_ideal
   - utter_user_ideal
   - utter_did_that_help
@@ -392,7 +703,7 @@
  
 ## helpful path
 * greet
-  - utter_greet
+  - action_greet
 * helpful
   - utter_helpful
   - utter_did_that_help
@@ -405,7 +716,7 @@
 
 ## company instructions path
 * greet
-  - utter_greet
+  - action_greet
 * company_instructions
   - utter_company_instructions
   - utter_did_that_help
@@ -418,7 +729,7 @@
  
 ## popular company path
 * greet
-  - utter_greet
+  - action_greet
 * popular_company{"company": "intel"}
   - utter_popular_company
   - utter_did_that_help
@@ -430,20 +741,27 @@
   
 ## company job time path
 * greet
-  - utter_greet
+  - action_greet
 * company_job_time
-  - utter_company_job_time
-  - utter_did_that_help
+  - action_search_jobtime
 * affirm OR thanks
   - utter_gratitude
 * goodbye
   - utter_goodbye 
   - action_restarting 
- 
+
+## company job time path 1
+* greet
+  - action_greet
+* company_job_time
+  - action_search_jobtime
+* affirm OR thanks
+  - utter_gratitude
+
  
 ## company apti ans path
 * greet
-  - utter_greet
+  - action_greet
 * company_apti_ans
   - utter_company_apti_ans
   - utter_did_that_help
@@ -456,7 +774,7 @@
  
 ## company better path
 * greet
-  - utter_greet
+  - action_greet
 * company_better{"company": "nvidia","company": "amd"}
   - utter_company_better
   - utter_did_that_help
@@ -469,7 +787,7 @@
 
 ## company achievement path
 * greet
-  - utter_greet
+  - action_greet
 * company_achievement{"company": "asus"}
   - utter_company_achievement
   - utter_did_that_help
@@ -482,7 +800,7 @@
 
 ## interview time path
 * greet
-  - utter_greet
+  - action_greet
 * interview_time
   - utter_interview_time
   - utter_did_that_help
@@ -494,7 +812,7 @@
 
 ## salary path
 * greet
-  - utter_greet
+  - action_greet
 * salary
   - utter_salary
   - utter_did_that_help
@@ -506,7 +824,7 @@
 
 ## interview taker path
 * greet
-  - utter_greet
+  - action_greet
 * charge
   - utter_charge
   - utter_did_that_help
@@ -519,7 +837,7 @@
 
 ## job match path
 * greet
-  - utter_greet
+  - action_greet
 * job_match
   - utter_job_match
   - utter_did_that_help
@@ -532,7 +850,7 @@
 
 ## work LMN employee
 * greet
-  - utter_greet
+  - action_greet
 * LMN
   - utter_LMN
   - utter_did_that_help
@@ -544,7 +862,7 @@
 
 ## interview success path
 * greet
-  - utter_greet
+  - action_greet
 * interview_success
   - utter_interview_success
   - utter_did_that_help
@@ -557,7 +875,7 @@
 
 ## company motto
 * greet
-  - utter_greet
+  - action_greet
 * company_motto{"company": "hp"}
   - utter_company_motto
   - utter_did_that_help
@@ -570,7 +888,7 @@
  
 ## interview date path
 * greet
-  - utter_greet
+  - action_greet
 * interview_date
   - utter_interview_date
   - utter_did_that_help
@@ -582,7 +900,7 @@
  
 ## interview history path  
 * greet
-  - utter_greet
+  - action_greet
 * interview_history
   - utter_interview_history
   - utter_did_that_help
@@ -595,7 +913,7 @@
 
 ## job description applied path
 * greet
-  - utter_greet
+  - action_greet
 * job_description_applied
   - utter_job_description_applied
   - utter_did_that_help
@@ -607,7 +925,7 @@
 
 ## eligibility path
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "ml engineer"}
   - action_eligibility_criteria
   - utter_did_that_help
@@ -619,7 +937,7 @@
   
 ## eligibility path 2
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "data scientist"}
   - action_eligibility_criteria
   - utter_did_that_help
@@ -652,7 +970,7 @@
 
 ## deny think path
 * greet
-  - utter_greet
+  - action_greet
 * think
   - utter_think
   - utter_did_that_help
@@ -682,7 +1000,7 @@
   
 ## deny job path
 * greet
-  - utter_greet	
+  - action_greet	
 * skills_job{"company": "amazon"}
   - action_skills
   - utter_did_that_help
@@ -694,7 +1012,7 @@
 
 ## deny job path 1
 * greet
-  - utter_greet
+  - action_greet
 * skills_job{"job": "ml engineer"}
   - action_skills
   - utter_did_that_help
@@ -707,7 +1025,7 @@
   
 ## deny job profile path 0
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"java,c,c++"}
@@ -718,6 +1036,10 @@
   - action_search_exp
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
 * deny
   - utter_ask_again 
   - action_restarting
@@ -726,7 +1048,7 @@
 
 ## deny job profile path 1
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c,c++ and java"}
@@ -737,6 +1059,10 @@
   - action_search_exp
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
 * deny
   - utter_ask_again 
   - action_restarting
@@ -745,7 +1071,7 @@
 
 ## deny job profile path 2
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml,deep learning"}
@@ -762,7 +1088,7 @@
 
 ## deny job profile path 3
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"android java and python"}
@@ -771,6 +1097,10 @@
   - action_search_job_desc
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
 * deny
   - utter_ask_again 
   - action_restarting
@@ -779,7 +1109,7 @@
 
 ## deny job profile path 4
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c and java"}
@@ -788,6 +1118,10 @@
   - action_search_job_desc
 * salary
   - action_search_salary
+* company_job_time
+  - action_search_jobtime
+* company_job_time
+  - action_search_jobtime
 * experience
   - action_search_exp
 * deny
@@ -798,7 +1132,7 @@
 
 ## deny job profile path 5
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++ and python"}
@@ -813,7 +1147,7 @@
 
 ## deny job profile path 6
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++,python and android"}
@@ -828,7 +1162,7 @@
 
 ## deny job profile path 7
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml , python deep learning"}
@@ -843,7 +1177,7 @@
 
 ## deny job profile path 8
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ruby,python and scripting"}
@@ -855,7 +1189,7 @@
 
 ## deny job profile path 9
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"excel,word"}
@@ -867,7 +1201,7 @@
 
 ## deny job profile path 10
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ui,ux,angular"}
@@ -879,7 +1213,7 @@
 
 ## deny job profile path 11
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"python,ruby and perl"}
@@ -891,7 +1225,7 @@
 
 ## deny company address path 0
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"location": "bhopal","company": "google"}
   - action_search_address
   - utter_did_that_help
@@ -903,7 +1237,7 @@
 
 ## deny company address path 1
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "microsoft"}
   - action_search_address
   - utter_did_that_help
@@ -915,7 +1249,7 @@
 
 ## deny company address path 2
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "tcs","location": "mumbai"}
   - action_search_address
   - utter_did_that_help
@@ -927,7 +1261,7 @@
   
 ## deny company address path 3
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "nvidia"}
   - action_search_address
   - utter_did_that_help
@@ -939,7 +1273,7 @@
 
 ## deny interview round path
 * greet
-  - utter_greet
+  - action_greet
 * interview_round{"company": "tata"}
   - utter_interview_round
   - utter_did_that_help
@@ -952,7 +1286,7 @@
 
 ## deny application path
 * greet
-  - utter_greet
+  - action_greet
 * application_status
   - utter_application
   - utter_did_that_help
@@ -964,7 +1298,7 @@
 
 ## deny interview document path
 * greet
-  - utter_greet
+  - action_greet
 * interview_document
   - utter_interview_document
   - utter_did_that_help
@@ -976,7 +1310,7 @@
 
 ## deny stupid question path
 * greet
-  - utter_greet
+  - action_greet
 * stupid
   - utter_stupid_question
   - utter_did_that_help
@@ -989,7 +1323,7 @@
   
 ## deny holidays
 * greet
-  - utter_greet
+  - action_greet
 * holidays
   - utter_holidays
   - utter_did_that_help
@@ -1002,7 +1336,7 @@
 
 ## deny user ideal path
 * greet
-  - utter_greet
+  - action_greet
 * user_ideal
   - utter_user_ideal
   - utter_did_that_help
@@ -1015,7 +1349,7 @@
  
 ## deny helpful path
 * greet
-  - utter_greet
+  - action_greet
 * helpful
   - utter_helpful
   - utter_did_that_help
@@ -1027,7 +1361,7 @@
 
 ## deny company instructions path
 * greet
-  - utter_greet
+  - action_greet
 * company_instructions
   - utter_company_instructions
   - utter_did_that_help
@@ -1039,7 +1373,7 @@
  
 ## deny popular company path
 * greet
-  - utter_greet
+  - action_greet
 * popular_company{"company": "intel"}
   - utter_popular_company
   - utter_did_that_help
@@ -1051,7 +1385,7 @@
   
 ## deny company job time path
 * greet
-  - utter_greet
+  - action_greet
 * company_job_time
   - utter_company_job_time
   - utter_did_that_help
@@ -1063,7 +1397,7 @@
  
 ## deny company apti ans path
 * greet
-  - utter_greet
+  - action_greet
 * company_apti_ans
   - utter_company_apti_ans
   - utter_did_that_help
@@ -1075,7 +1409,7 @@
  
 ## deny company better path
 * greet
-  - utter_greet
+  - action_greet
 * company_better{"company": "nvidia","company": "amd"}
   - utter_company_better
   - utter_did_that_help
@@ -1087,7 +1421,7 @@
 
 ## deny company achievement path
 * greet
-  - utter_greet
+  - action_greet
 * company_achievement{"company": "asus"}
   - utter_company_achievement
   - utter_did_that_help
@@ -1099,7 +1433,7 @@
 
 ## deny interview time path
 * greet
-  - utter_greet
+  - action_greet
 * interview_time
   - utter_interview_time
   - utter_did_that_help
@@ -1110,7 +1444,7 @@
 
 ## deny salary path
 * greet
-  - utter_greet
+  - action_greet
 * salary
   - utter_salary
   - utter_did_that_help
@@ -1121,7 +1455,7 @@
 
 ## deny interview taker path
 * greet
-  - utter_greet
+  - action_greet
 * charge
   - utter_charge
   - utter_did_that_help
@@ -1136,7 +1470,7 @@
 
 ## deny job match path
 * greet
-  - utter_greet
+  - action_greet
 * job_match
   - utter_job_match
   - utter_did_that_help
@@ -1148,7 +1482,7 @@
 
 ## deny work LMN employee
 * greet
-  - utter_greet
+  - action_greet
 * LMN
   - utter_LMN
   - utter_did_that_help
@@ -1160,7 +1494,7 @@
 
 ## deny interview success path
 * greet
-  - utter_greet
+  - action_greet
 * interview_success
   - utter_interview_success
   - utter_did_that_help
@@ -1172,7 +1506,7 @@
 
 ## deny company motto
 * greet
-  - utter_greet
+  - action_greet
 * company_motto{"company": "hp"}
   - utter_company_motto
   - utter_did_that_help
@@ -1184,7 +1518,7 @@
  
 ## deny interview date path
 * greet
-  - utter_greet
+  - action_greet
 * interview_date
   - utter_interview_date
   - utter_did_that_help
@@ -1196,7 +1530,7 @@
  
 ## deny interview history path  
 * greet
-  - utter_greet
+  - action_greet
 * interview_history
   - utter_interview_history
   - utter_did_that_help
@@ -1208,7 +1542,7 @@
 
 ## deny job description applied path
 * greet
-  - utter_greet
+  - action_greet
 * job_description_applied
   - utter_job_description_applied
   - utter_did_that_help
@@ -1220,7 +1554,7 @@
 
 ## deny eligibility path
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "ml engineer"}
   - action_eligibility_criteria
   - utter_did_that_help
@@ -1232,7 +1566,7 @@
   
 ## deny eligibility path 2
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "data scientist"}
   - action_eligibility_criteria
   - utter_did_that_help
@@ -1259,7 +1593,7 @@
 
 ## nogreet think path
 * greet
-  - utter_greet
+  - action_greet
 * think
   - utter_think
   - utter_did_that_help
@@ -1286,7 +1620,7 @@
   
 ## nogreet job path
 * greet
-  - utter_greet	
+  - action_greet	
 * skills_job{"company": "amazon"}
   - action_skills
   - utter_did_that_help
@@ -1296,7 +1630,7 @@
 
 ## nogreet job path 1
 * greet
-  - utter_greet
+  - action_greet
 * skills_job{"job": "ml engineer"}
   - action_skills
   - utter_did_that_help
@@ -1307,7 +1641,7 @@
   
 ## nogreet job profile path 0
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"java,c,c++"}
@@ -1320,7 +1654,7 @@
 
 ## nogreet job profile path 1
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c,c++ and java"}
@@ -1333,7 +1667,7 @@
 
 ## nogreet job profile path 2
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml,deep learning"}
@@ -1346,7 +1680,7 @@
 
 ## nogreet job profile path 3
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"android java and python"}
@@ -1359,7 +1693,7 @@
 
 ## nogreet job profile path 4
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c and java"}
@@ -1372,7 +1706,7 @@
 
 ## nogreet job profile path 5
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++ and python"}
@@ -1385,7 +1719,7 @@
 
 ## nogreet job profile path 6
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"c++,python and android"}
@@ -1398,7 +1732,7 @@
 
 ## nogreet job profile path 7
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ml , python deep learning"}
@@ -1411,7 +1745,7 @@
 
 ## nogreet job profile path 8
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ruby,python and scripting"}
@@ -1421,7 +1755,7 @@
 
 ## nogreet job profile path 9
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"excel,word"}
@@ -1431,7 +1765,7 @@
 
 ## nogreet job profile path 10
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"ui,ux,angular"}
@@ -1441,7 +1775,7 @@
 
 ## nogreet job profile path 11
 * greet
-  - utter_greet
+  - action_greet
 * job_profile
   - utter_ask_skills
 * my_skills{"skills":"python,ruby and perl"}
@@ -1451,7 +1785,7 @@
 
 ## nogreet company address path 0
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"location": "bhopal","company": "google"}
   - action_search_address
   - utter_did_that_help
@@ -1462,7 +1796,7 @@
 
 ## nogreet company address path 1
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "microsoft"}
   - action_search_address
   - utter_did_that_help
@@ -1472,7 +1806,7 @@
 
 ## nogreet company address path 2
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "tcs","location": "mumbai"}
   - action_search_address
   - utter_did_that_help
@@ -1482,7 +1816,7 @@
   
 ## nogreet company address path 3
 * greet
-  - utter_greet
+  - action_greet
 * company_address{"company": "nvidia"}
   - action_search_address
   - utter_did_that_help
@@ -1492,7 +1826,7 @@
 
 ## nogreet interview round path
 * greet
-  - utter_greet
+  - action_greet
 * interview_round{"company": "tata"}
   - utter_interview_round
   - utter_did_that_help
@@ -1503,7 +1837,7 @@
 
 ## nogreet application path
 * greet
-  - utter_greet
+  - action_greet
 * application_status
   - utter_application
   - utter_did_that_help
@@ -1514,7 +1848,7 @@
 
 ## nogreet interview document path
 * greet
-  - utter_greet
+  - action_greet
 * interview_document
   - utter_interview_document
   - utter_did_that_help
@@ -1524,7 +1858,7 @@
 
 ## nogreet stupid question path
 * greet
-  - utter_greet
+  - action_greet
 * stupid
   - utter_stupid_question
   - utter_did_that_help
@@ -1535,7 +1869,7 @@
   
 ## nogreet holidays
 * greet
-  - utter_greet
+  - action_greet
 * holidays
   - utter_holidays
   - utter_did_that_help
@@ -1546,7 +1880,7 @@
 
 ## nogreet user ideal path
 * greet
-  - utter_greet
+  - action_greet
 * user_ideal
   - utter_user_ideal
   - utter_did_that_help
@@ -1557,7 +1891,7 @@
  
 ## nogreet helpful path
 * greet
-  - utter_greet
+  - action_greet
 * helpful
   - utter_helpful
   - utter_did_that_help
@@ -1568,7 +1902,7 @@
 
 ## nogreet company instructions path
 * greet
-  - utter_greet
+  - action_greet
 * company_instructions
   - utter_company_instructions
   - utter_did_that_help
@@ -1579,7 +1913,7 @@
  
 ## nogreet popular company path
 * greet
-  - utter_greet
+  - action_greet
 * popular_company{"company": "intel"}
   - utter_popular_company
   - utter_did_that_help
@@ -1589,7 +1923,7 @@
   
 ## nogreet company job time path
 * greet
-  - utter_greet
+  - action_greet
 * company_job_time
   - utter_company_job_time
   - utter_did_that_help
@@ -1600,7 +1934,7 @@
  
 ## nogreet company apti ans path
 * greet
-  - utter_greet
+  - action_greet
 * company_apti_ans
   - utter_company_apti_ans
   - utter_did_that_help
@@ -1611,7 +1945,7 @@
  
 ## nogreet company better path
 * greet
-  - utter_greet
+  - action_greet
 * company_better{"company": "nvidia","company": "amd"}
   - utter_company_better
   - utter_did_that_help
@@ -1622,7 +1956,7 @@
 
 ## nogreet company achievement path
 * greet
-  - utter_greet
+  - action_greet
 * company_achievement{"company": "asus"}
   - utter_company_achievement
   - utter_did_that_help
@@ -1633,7 +1967,7 @@
 
 ## nogreet interview time path
 * greet
-  - utter_greet
+  - action_greet
 * interview_time
   - utter_interview_time
   - utter_did_that_help
@@ -1643,7 +1977,7 @@
 
 ## nogreet salary path
 * greet
-  - utter_greet
+  - action_greet
 * salary
   - utter_salary
   - utter_did_that_help
@@ -1653,7 +1987,7 @@
 
 ## nogreet interview taker path
 * greet
-  - utter_greet
+  - action_greet
 * charge
   - utter_charge
   - utter_did_that_help
@@ -1664,7 +1998,7 @@
 
 ## nogreet job match path
 * greet
-  - utter_greet
+  - action_greet
 * job_match
   - utter_job_match
   - utter_did_that_help
@@ -1675,7 +2009,7 @@
 
 ## nogreet work LMN employee
 * greet
-  - utter_greet
+  - action_greet
 * LMN
   - utter_LMN
   - utter_did_that_help
@@ -1685,7 +2019,7 @@
 
 ## nogreet interview success path
 * greet
-  - utter_greet
+  - action_greet
 * interview_success
   - utter_interview_success
   - utter_did_that_help
@@ -1696,7 +2030,7 @@
 
 ## nogreet company motto
 * greet
-  - utter_greet
+  - action_greet
 * company_motto{"company": "hp"}
   - utter_company_motto
   - utter_did_that_help
@@ -1707,7 +2041,7 @@
  
 ## nogreet interview date path
 * greet
-  - utter_greet
+  - action_greet
 * interview_date
   - utter_interview_date
   - utter_did_that_help
@@ -1717,7 +2051,7 @@
  
 ## nogreet interview history path  
 * greet
-  - utter_greet
+  - action_greet
 * interview_history
   - utter_interview_history
   - utter_did_that_help
@@ -1728,7 +2062,7 @@
 
 ## nogreet job description applied path
 * greet
-  - utter_greet
+  - action_greet
 * job_description_applied
   - utter_job_description_applied
   - utter_did_that_help
@@ -1738,7 +2072,7 @@
 
 ## nogreet eligibility path
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "ml engineer"}
   - action_eligibility_criteria
   - utter_did_that_help
@@ -1748,7 +2082,7 @@
   
 ## nogreet eligibility path 2
 * greet
-  - utter_greet
+  - action_greet
 * eligibility_criteria{"job": "data scientist"}
   - action_eligibility_criteria
   - utter_did_that_help
