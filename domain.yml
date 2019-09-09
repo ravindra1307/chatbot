@@ -5,11 +5,14 @@ actions:
 - action_restarting
 - action_search_address
 - action_search_jobs
+- action_search_jobs_more
 - action_search_exp
 - action_search_salary
 - action_search_job_desc
 - action_skills
+- action_greet
 - action_questions
+- action_search_jobtime
 - utter_LMN
 - utter_application
 - utter_ask_again
@@ -184,6 +187,8 @@ entities:
 - faq
 
 intents:
+- more
+- previous
 - set job slots
 - skills_job
 - job_profile
@@ -222,7 +227,6 @@ intents:
 - goodbye
 - thanks
 - questions
-- out_of_context: {triggers: utter_out_of_context}
 - faq_0: {triggers: utter_faq_0}
 - faq_1: {triggers: utter_faq_1}
 - faq_2: {triggers: utter_faq_2}
