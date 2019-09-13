@@ -57,6 +57,7 @@
 - company [cleartrail](company) position [developer](job)
 - company [impetus](company) position [testing](job)
 - company [klera](company) position [analyst](job)
+- company [value labs] position [web developer](job)
 
 ## intent: more
 - Show more
@@ -673,6 +674,28 @@
 - [python](skills)
 - [c++](skills)
 - [machine learning](skills)
+- [c,c++,java](skills)
+- [c c++ ml java](skills)
+- [c++,.net and java](skills)
+- [python,c++,java](skills)
+- [android,c++,python java](skills)
+- [c,java,python](skills)
+- [c,android,c++,java](skills)
+- [angular,css and javascript](skills)
+- [c,c++ and java](skills)
+- [c and java](skills)
+- [java and python](skills)
+- [python and machine learning](skills)
+- [java](skills)
+- [c](skills)
+- [python](skills)
+- [c++ and java](skills)
+- [machine learning](skills)
+- [java,python,c++](skills)
+- [java,c,c++](skills)
+- [python,ml,c](skills)
+- [c++,python](skills)
+- [machine learning and python](skills)
 
 
 ## intent: application_status
