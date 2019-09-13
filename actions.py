@@ -1,7 +1,7 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, Restarted
+from rasa_sdk.events import SlotSet, Restarted, FollowupAction
 
 import sqlite3
 
@@ -11,50 +11,107 @@ class action_search_jobs(Action):
     def name(self) -> Text:
         return "action_search_jobs"
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
-        conn = sqlite3.connect('job_data.db')     
-        result = tracker.get_slot('skills')
-        result = result.replace(' ',',')
-        
-        if ',' in result:
-               result = [x.strip() for x in result.split(',')]
-      
-        if 'and' in result:
-            result.remove('and')
-        
+    
+    
         global offset_value
             
         offset_value = 0
-            
-       
+        conn = sqlite3.connect('job_data.db')     
+        result = tracker.get_slot('skills')
         
-        if len(result)>2:       
+        if result == None:
+            result=[]
+            ext_entity = (tracker.latest_message)['text']
+            skills_list = ["javaScript","sql","java","ruby","php","python","c","c++","c#","html","css"]
+            split_space = ext_entity.split()
+            split_comma = ext_entity.split(',')
+            split_all = split_comma+split_space
+            for i in skills_list:
+                if i in split_all:
+                    result.append(i)   
+                    
+            
+            if len(result)>2:       
                 q = conn.execute("SELECT DISTINCT company,position from joblistings \
                           WHERE skills_req like '%{}%' or  skills_req like '%{}%' or  skills_req like '%{}%' LIMIT 5\
                           ".format(result[0].lower(),result[1].lower(),result[2].lower()))
-        elif len(result)==2:
+            elif len(result)==2:
                 q = conn.execute("SELECT DISTINCT company,position from joblistings \
                           WHERE skills_req like '%{}%' or  skills_req like '%{}%' LIMIT 5 \
                           ".format(result[0].lower(),result[1].lower()))
-        else:
-            q = conn.execute("SELECT DISTINCT company,position from joblistings \
+            else:
+                q = conn.execute("SELECT DISTINCT company,position from joblistings \
                           WHERE skills_req like '%{}%' LIMIT 5 \
                           ".format(result[0].lower()))
 
 
-        r=(q.fetchall())
-        dispatcher.utter_message("select the position for which you want to enquire")
-        buttons = []
+            r=(q.fetchall())
+            dispatcher.utter_message("select the position for which you want to enquire")
+            buttons = []
         
-        for row in r:
+            for row in r:
             
-            title = ("company {} position {}".format(row[0],row[1]))
-            payload = ('company {} position {}'.format(row[0],row[1]))
-            buttons.append({ "title": title, "payload": payload })
+                title = ("company {} position {}".format(row[0],row[1]))
+                payload = ('company {} position {}'.format(row[0],row[1]))
+                buttons.append({ "title": title, "payload": payload })
             
-        if len(r) > 4:
-            buttons.append({ "title": "Show more" ,"payload":"Show more"})    
+            if len(r) > 4:
+                buttons.append({ "title": "Show more" ,"payload":"Show more"})    
+            
+            s = ","
+            s = s.join(result) 
+            #print(s) 
+            #return(SlotSet('skills',s))
+            
+            dispatcher.utter_button_message("{}".format(s),buttons) 
+            return [SlotSet('skills',s)]
+
+            
+
+
+
         
-        dispatcher.utter_button_message("",buttons)  
+        else:
+            result = result.replace(' ',',')
+            
+            if ',' in result:
+                   result = [x.strip() for x in result.split(',')]
+          
+            if 'and' in result:
+                result.remove('and')
+        
+            if len(result)>2:       
+                    q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                              WHERE skills_req like '%{}%' or  skills_req like '%{}%' or  skills_req like '%{}%' LIMIT 5\
+                              ".format(result[0].lower(),result[1].lower(),result[2].lower()))
+            elif len(result)==2:
+                    q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                              WHERE skills_req like '%{}%' or  skills_req like '%{}%' LIMIT 5 \
+                              ".format(result[0].lower(),result[1].lower()))
+            else:
+                q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                              WHERE skills_req like '%{}%' LIMIT 5 \
+                              ".format(result[0].lower()))
+
+
+            r=(q.fetchall())
+            dispatcher.utter_message("select the position for which you want to enquire")
+            buttons = []
+            
+            for row in r:
+                
+                title = ("company {} position {}".format(row[0],row[1]))
+                payload = ('company {} position {}'.format(row[0],row[1]))
+                buttons.append({ "title": title, "payload": payload })
+                
+            if len(r) > 4:
+                buttons.append({ "title": "Show more" ,"payload":"Show more"})    
+            
+            dispatcher.utter_button_message("",buttons)  
+        
+        
+            
+       
         
         
         
@@ -160,6 +217,8 @@ class action_greet(Action):
         dispatcher.utter_template('utter_out_of_context',tracker)
       else:
         dispatcher.utter_template('utter_greet',tracker)
+        
+     # return [FollowupAction("action_search_jobs")]
       
 
 class action_questions(Action):
