@@ -39,6 +39,23 @@
 - wtf?
 
 
+## intent:experience
+- Experience is [0](experience) years
+- Experience is [0-2](experience) years
+- Experience is [2-4](experience) years
+- Experience is [4](experience)+ years
+
+## intent: location
+- [banglore](location)
+- [indore](location)
+- [hyderabad](location)
+- [bhopal](location)
+- [pune](location)
+- [delhi](location)
+- [mumbai](location)
+- [chennai](location)
+- [london](location)
+
 ## regex:date
 - ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))(?:(?:1[6-9]|[2-9]\d)?\d{2})$
 
@@ -651,7 +668,7 @@
 - what are the skills required to get a [ml engineer](job) job
 - What is the criteria required for [ml engineer](job) job
 
-# intent: my_skils
+# intent: my_skills
 - my skills are [c,c++,java](skills)
 - my skills are [c c++ ml java](skills)
 - skills are [c++,.net and java](skills)
@@ -711,8 +728,9 @@
 - did they review application
 - when will i get the call
 
-## intent: experience
+## intent: experience_required
 - what is minimum experience required
+- What is minimum experience required
 - what is the job experience required
 - what is the experience required
 - what is required experience

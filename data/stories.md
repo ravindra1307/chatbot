@@ -88,8 +88,9 @@
   
 ## job profile more without 0
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -98,10 +99,14 @@
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
 * company_job_time
-  - action_search_jobtime
-* experience
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -114,14 +119,17 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c,c++ and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
-* experience
+* company_job_time
+  - action_search_jobtime
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -133,8 +141,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml,deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -143,7 +152,11 @@
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -154,19 +167,26 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"android java and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* company_job_time
+  - action_search_jobtime
+* experience_required
   - action_search_exp
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -177,14 +197,17 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* company_job_time
+  - action_search_jobtime
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -196,18 +219,22 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++ and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
-
 * set job slots
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -216,8 +243,9 @@
   
 ## job profile previous without 0
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -228,10 +256,18 @@
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
-* experience
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -244,8 +280,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c,c++ and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -253,7 +290,7 @@
   - action_search_jobs  
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -265,8 +302,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml,deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -277,7 +315,11 @@
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -288,8 +330,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"android java and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -297,12 +340,18 @@
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* company_job_time
+  - action_search_jobtime
+* experience_required
   - action_search_exp
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -313,8 +362,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -322,8 +372,14 @@
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
+* salary
+  - action_search_salary
+* company_job_time
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -334,8 +390,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++ and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * more
   - action_search_jobs_more
@@ -346,7 +403,9 @@
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -356,18 +415,23 @@
   
 ## job profile without 0
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "infosys","job": "machine learning engineer"}
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria 
 * company_job_time
-  - action_search_jobtime
-* experience
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -377,8 +441,9 @@
 
 ## job profile without 1
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "infosys","job": "machine learning engineer"}
   - action_search_job_desc
@@ -393,18 +458,23 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java,c,c++"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
-* experience
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -416,12 +486,13 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c,c++ and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -433,15 +504,18 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml,deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "amazon","job": "ml engineer"}
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -452,17 +526,20 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"android java and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -473,12 +550,13 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * affirm OR thanks
   - utter_gratitude
@@ -490,15 +568,18 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++ and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * affirm OR thanks
   - utter_gratitude
 * goodbye
@@ -509,8 +590,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++,python and android"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -524,8 +606,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml , python deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -539,8 +622,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ruby,python and scripting"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -549,8 +633,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"excel,word"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -559,8 +644,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ui,ux,angular"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -569,8 +655,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"python,ruby and perl"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -1027,19 +1114,24 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java,c,c++"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * deny
   - utter_ask_again 
   - action_restarting
@@ -1050,19 +1142,24 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c,c++ and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * deny
   - utter_ask_again 
   - action_restarting
@@ -1073,12 +1170,13 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml,deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "amazon","job": "ml engineer"}
   - action_search_job_desc
-* experience
+* experience_required
   - action_search_exp
 * deny
   - utter_ask_again 
@@ -1090,17 +1188,22 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"android java and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * deny
   - utter_ask_again 
   - action_restarting
@@ -1111,18 +1214,23 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
 * salary
   - action_search_salary
 * company_job_time
-  - action_search_jobtime
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
 * company_job_time
-  - action_search_jobtime
-* experience
+  - action_search_jobtime 
+* eligibility_criteria
+  - action_eligibility_criteria
+* experience_required
   - action_search_exp
 * deny
   - utter_ask_again 
@@ -1134,8 +1242,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++ and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots
   - action_search_job_desc
@@ -1149,8 +1258,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++,python and android"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1164,11 +1274,14 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml , python deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
+* company_job_time
+  - action_search_jobtime
 * deny
   - utter_ask_again 
   - action_restarting
@@ -1179,8 +1292,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ruby,python and scripting"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1191,8 +1305,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"excel,word"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1203,8 +1318,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ui,ux,angular"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -1215,8 +1331,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"python,ruby and perl"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -1643,8 +1760,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"java,c,c++"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
@@ -1656,8 +1774,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c,c++ and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1669,8 +1788,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml,deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "amazon","job": "ml engineer"}
   - action_search_job_desc
@@ -1682,8 +1802,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"android java and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
@@ -1695,8 +1816,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c and java"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "tcs","job": "system engineer"}
   - action_search_job_desc
@@ -1708,8 +1830,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++ and python"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots
   - action_search_job_desc
@@ -1721,8 +1844,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"c++,python and android"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1734,8 +1858,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ml , python deep learning"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -1747,8 +1872,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ruby,python and scripting"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1757,8 +1883,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"excel,word"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs
 * set job slots{"company": "microsoft","job": "product manager"}
   - action_search_job_desc
@@ -1767,8 +1894,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"ui,ux,angular"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
@@ -1777,8 +1905,9 @@
 * greet
   - action_greet
 * job_profile
-  - utter_ask_skills
-* my_skills{"skills":"python,ruby and perl"}
+  - job_form
+  - form{"name": "job_form"}
+  - form{"name": null}
   - action_search_jobs{"company": "google","job": "data scientist"}
 * set job slots
   - action_search_job_desc
