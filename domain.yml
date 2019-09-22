@@ -177,6 +177,10 @@ actions:
 - utter_faq_124
 - utter_faq_125
 - utter_faq_126
+- utter_ask_experience
+- utter_ask_location
+- utter_ask_job_queries
+- utter_start
 
 entities:
 - company
@@ -185,19 +189,25 @@ entities:
 - location
 - skills
 - faq
+- experience
+
+forms:
+  - job_form
 
 intents:
 - more
+- location
 - previous
 - set job slots
 - skills_job
 - job_profile
-- greet
+- greet: {triggers: action_greet}
 - think
 - my_skills
 - application_status
 - salary
 - experience
+- experience_required
 - interview_date
 - eligibility_criteria
 - company_address
@@ -364,17 +374,22 @@ slots:
   job:
     type: text
   location:
-    type: text
+    type: unfeaturized
   skills:
-    type: text
+    type: unfeaturized
   faq:
     type: text
-
-
-
-
+  experience:
+    type: unfeaturized
 
 templates:
+  utter_start:
+  - text: Please select from these options
+    buttons:
+    - title: "Search Jobs"
+      payload: "Show some jobs"
+    - title: "Queries"
+      payload: "queries"
   utter_LMN:
   - text: the responsibilities of LMN are *display responsibility of LMN employee
       accordingly *
@@ -385,6 +400,30 @@ templates:
   - text: No issues! Let's try this again. Please repeat your query?
   utter_ask_skills:
   - text: May i know your skills please ?
+  utter_ask_experience:
+  - text: Please select your experience
+    buttons:
+    - title: "0 years"
+      payload: "Experience is 0 years"
+    - title: "0-2 years"
+      payload: "Experience is 0-2 years"
+    - title: "2-4 years"
+      payload: "Experience is 2-4 years" 
+    - title: "4+ years"
+      payload: "Experience is 4+ years"
+  utter_ask_job_queries:
+  - text: Please select your queries
+    buttons:
+    - title: "Salary offered"
+      payload: "What is the salary"
+    - title: "Min. experience required"
+      payload: "what is minimum experience required"
+    - title: "Job Timing"
+      payload: "What is the timing of job" 
+    - title: "Eligiblity"
+      payload: "What are the eligibility criteria"
+  utter_ask_location:
+  - text: "Tell me your location preference"
   utter_charge:
   - text: '*HR Name display *'
   utter_company_achievement:
