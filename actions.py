@@ -197,21 +197,40 @@ class action_search_jobs(Action):
             if 'and' in result:
                 result.remove('and')
         
-            if len(result)>2:       
+            if location_pref == 'no':
+                if len(result)>2:       
+                        q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                                  WHERE (skills_req like '%{}%' or  skills_req like '%{}%' or  skills_req like '%{}%')\
+                                  and exp_req <= '{}' LIMIT 5\
+                                  ".format(result[0].lower(),result[1].lower(),result[2].lower(),experience_format))
+                elif len(result)==2:
+                        dispatcher.utter_message("select the position for which you want to enquire")
+                        q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                                  WHERE (skills_req like '%{}%' or  skills_req like '%{}%')\
+                                  and exp_req <= '{}' LIMIT 5 \
+                                  ".format(result[0].lower(),result[1].lower(),experience_format))
+                else:
                     q = conn.execute("SELECT DISTINCT company,position from joblistings \
-                              WHERE (skills_req like '%{}%' or  skills_req like '%{}%' or  skills_req like '%{}%')\
-                              and exp_req <= '{}' and job_location = '{}' LIMIT 5\
-                              ".format(result[0].lower(),result[1].lower(),result[2].lower(),experience_format,location_pref.lower()))
-            elif len(result)==2:
-                    dispatcher.utter_message("select the position for which you want to enquire")
+                                  WHERE skills_req like '%{}%' and exp_req <= '{}' LIMIT 5 \
+                                  ".format(result[0].lower(),experience_format))
+                
+            else: 
+        
+                if len(result)>2:       
+                        q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                                  WHERE (skills_req like '%{}%' or  skills_req like '%{}%' or  skills_req like '%{}%')\
+                                  and exp_req <= '{}' and job_location = '{}' LIMIT 5\
+                                  ".format(result[0].lower(),result[1].lower(),result[2].lower(),experience_format,location_pref.lower()))
+                elif len(result)==2:
+                        dispatcher.utter_message("select the position for which you want to enquire")
+                        q = conn.execute("SELECT DISTINCT company,position from joblistings \
+                                  WHERE (skills_req like '%{}%' or  skills_req like '%{}%')\
+                                  and exp_req <= '{}' and job_location = '{}' LIMIT 5 \
+                                  ".format(result[0].lower(),result[1].lower(),experience_format,location_pref.lower()))
+                else:
                     q = conn.execute("SELECT DISTINCT company,position from joblistings \
-                              WHERE (skills_req like '%{}%' or  skills_req like '%{}%')\
-                              and exp_req <= '{}' and job_location = '{}' LIMIT 5 \
-                              ".format(result[0].lower(),result[1].lower(),experience_format,location_pref.lower()))
-            else:
-                q = conn.execute("SELECT DISTINCT company,position from joblistings \
-                              WHERE skills_req like '%{}%' and exp_req <= '{}' and job_location = '{}' LIMIT 5 \
-                              ".format(result[0].lower(),experience_format,location_pref.lower()))
+                                  WHERE skills_req like '%{}%' and exp_req <= '{}' and job_location = '{}' LIMIT 5 \
+                                  ".format(result[0].lower(),experience_format,location_pref.lower()))
 
 
             r=(q.fetchall())

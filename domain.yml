@@ -181,6 +181,7 @@ actions:
 - utter_ask_location
 - utter_ask_job_queries
 - utter_start
+- utter_default
 
 entities:
 - company
@@ -422,8 +423,10 @@ templates:
       payload: "What is the timing of job" 
     - title: "Eligiblity"
       payload: "What are the eligibility criteria"
+    - title: "I am done"
+      payload: "bye"
   utter_ask_location:
-  - text: "Tell me your location preference"
+  - text: "Tell me your location preference (if no preference type 'no' "
   utter_charge:
   - text: '*HR Name display *'
   utter_company_achievement:
@@ -1110,4 +1113,5 @@ templates:
   - text: Fraudulent email messages referred to as "phishing" are becoming more common. It does not request personal information, financial information, account numbers, bank account numbers in an unsolicited manner through an email request. If you have any questions, please contact us.
   utter_faq_126: 
   - text: Yes, it’s safe and secure. It will not be shared with any third party except the authorized portal users 
-  
+  utter_default:
+  - text: Sorry , i didn't understand this, please rephrase it.

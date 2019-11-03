@@ -1,14 +1,20 @@
 <html>
 <head>
-  <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/uww42pxiiduyp6l/chatroom.css" />
+  <link rel="stylesheet" href="chatroom.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  
+  
 </head>
 <body>
+  <script src="https://kit.fontawesome.com/0b78b3e945.js" crossorigin="anonymous"></script>
   <div class="chat-container"></div>
 
   <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
   <script type="text/javascript">
     var chatroom = window.Chatroom({
-      host: "http://ec2-13-233-165-131.ap-south-1.compute.amazonaws.com:5555",
+      host: "https://bot.analysedbot.cf/chatbot",
       title: "Chat with Analysed bot",
       container: document.querySelector(".chat-container"),
       welcomeMessage: "Hi, I am Analysedbot. How may I help you?",
@@ -16,5 +22,7 @@
     });
     chatroom.openChat();
   </script>
+
+
 </body>
 </html>

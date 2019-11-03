@@ -1,44 +1,88 @@
 .chatroom{
 	width:20%;
-	height:400px;
+	height:500px;
 	color:#343d4e;
 	max-height:90vh;
+    margin:0;
 	background-color:hsla(0,0%,100%,.9);
-	border-radius:30px;
+	border-radius:0px;
 	border-bottom-left-radius:0;
 	border-bottom-right-radius:0;
 	letter-spacing:normal;
 	overflow:hidden;
 	box-shadow:0 0 0 2px hsla(0,0%,100%,.8)
 }
+@keyframes fade{
+	0%{
+		opacity:1
+}
+	to{
+		opacity:.3
+}
+}
+@keyframes example {
+    from { opacity:0}
+    to {opacity:1}
+}
 .chatroom,.chatroom *{
 	box-sizing:border-box
 }
+.chatroom.open{
+
+}
 .chatroom.closed{
-	height:40px
+	height:70px
 }
 .chatroom h3{
+    content: url('images/chatbot.jpg');
 	background-color:#2ab5d7;
 	color:#fff;
-	margin:0;
-	height:40px;
+	margin: auto;
+	width: 70px;
+    height: 70px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 10px;
 	font-weight:600;
-	font-size:18px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	cursor:pointer
 }
 .chatroom .chats{
-	box-sizing:border-box;
-	padding:20px;
+    /*border-style: solid;
+    border-width: 3px;
+    border-color:#37dbf5;
+	box-sizing:border-box; */
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,00,80,.2)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
+    content: "";
+
+/*    background-image:*/
+    padding:20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 	margin:0;
-	height:calc(100% - 80px);
+	height:calc(100% - 115px);
 	overflow-y:scroll;
 	-webkit-overflow-scrolling:touch
 }
+
+
+
 .chatroom .chats .chat{
-	background:hsla(181.9, 73.7%, 50.8%, 0.6);
+    /*background-image: url('https://www.dropbox.com/s/0aqly09sg2cn43v/p0.jpg?dl=1');
+    width: 400px;
+    height: 300px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+                                         */
+  /* width of the image plus a little extra padding */
+    /*display: block;*/
+	/*background:hsla(181.9, 73.7%, 50.8%, 0.6);*/
+    /*background-color: red;
+    animation-name: example;
+    animation-duration: 4s;  */
+    /*text-shadow: 2px 2px 5px #89ABE3FF;
 	position:relative;
 	padding:5px 13px;
 	font-size:14px;
@@ -48,18 +92,57 @@
 	clear:both;
 	margin:10px 0 0;
 	max-width:90%
+                                           */
+
+    background:#5A5EB9;
+	position:relative;
+	padding:5px 13px;
+	font-size:13px;
+	border-radius:20px;
+	list-style:none;
+	float:left;
+	clear:both;
+	margin:10px 0 0;
+	max-width:90%
+
 }
+/*
+.chatroom .chats .chat.left::before {
+    content: url('images/bat.jpg');
+    background-repeat: no-repeat;
+    display: inline;
+
+    content: "";
+    display: block;
+    background: url('images/icon2.png') no-repeat;
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-left: 10px;
+
+
+}
+*/
+
 .chatroom .chats .chat img{
 	max-width:100%;
-	vertical-align:middle
+	/*vertical-align:middle*/
 }
 .chatroom .chats .chat.left{
-	border-bottom-left-radius:0
+    background:#fff;
+    animation-name: example;
+    animation-duration: 1s;
+
+
 }
 .chatroom .chats .chat.right{
+    animation-name: example;
+    animation-duration: 1s;
 	float:right;
 	clear:both;
-	border-bottom-right-radius:0
+
+
+
 }
 .chatroom .chats .chat .text{
 	word-wrap:break-word
@@ -83,14 +166,7 @@
 	background:transparent;
 	padding:0
 }
-@keyframes fade{
-	0%{
-		opacity:1
-}
-	to{
-		opacity:.3
-}
-}
+
 .chatroom .chats .chat.waiting span{
 	font-size:1.5em;
 	animation-name:fade;
@@ -130,61 +206,87 @@
 	clear:both;
 	margin:10px 0;
 	text-align:center
+
 }
 .chatroom .chats .chat-buttons .chat-button{
+    animation-name: example;
+    animation-duration: 2s;
 	display:inline-block;
 	transition:all .3s ease;
 	cursor:pointer;
 	margin:3px;
-	background-color:#343d4e;
-	color:#fff;
-	border:2px solid #fff;
+    /*background: linear-gradient(to left, #087cf9, #37dbf5);*/
+    /*background: linear-gradient(-45deg, #89ABE3FF, #89ABE3FF);  */
+	background-color:#5A5EB9; /*rgba(87, 220, 222, 0.6);*/
+    box-shadow: 3px 3px blue;
+	color:#343d4e;
+	/*border:2px solid #fff;*/
 	padding:5px 10px;
 	letter-spacing:normal;
-	border-radius:5px
+	border-radius:5px;
+
 }
 .chatroom .chats .chat-buttons .chat-button.chat-button-selected,.chatroom .chats .chat-buttons .chat-button:hover{
-	background-color:rgba(52,61,78,.6);
+	background-color:#89ABE3FF;
+
+    height: 12%;
+    /*transition: width 1s;*/
 	color:#fff
+
 }
 .chatroom .chats .chat-buttons .chat-button.chat-button-disabled{
 	color:grey;
-	border:2px solid grey
+	/*border:2px solid grey*/
+
 }
 .chatroom .input{
-	height:40px;
+	height:45px;
 	width:100%;
 	margin:0;
-	padding:0 5px;
-	background-color:#343d4e;
+	padding:0px 5px;
+
+    background:#f4f7f9;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    border: none;
+    border-color: #f4f7f9;
 	display:flex;
 	flex-direction:row;
 	align-items:center
 }
 .chatroom .input input[type=text]{
-	background-color:hsla(0,0%,100%);
-	outline:0;
-	border:1px solid #fff;
-	border-right:none;
-	color:#343d4e;
-	padding:0 5px;
-	border-top-left-radius:3px;
+	background-color:#f4f7f9;
+	/*outline:0;
+	border:0px solid #fff;
+	border-right:none;*/
+
+	padding:0px 0px;
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    border: none;
+    border-color: #f4f7f9;
+	/*border-top-left-radius:3px;
 	border-bottom-left-radius:3px;
 	border-top-right-radius:0;
-	border-bottom-right-radius:0;
+	border-bottom-right-radius:0;    */
 	height:30px;
 	flex:4;
-	box-sizing:border-box;
+	/*box-sizing:border-box;*/
 	font-size:14px;
 	transition:background-color .2s ease
 }
 .chatroom .input input[type=text]:focus{
+    -webkit-box-shadow: none;
 	box-shadow:none;
-	background-color:#fff
+    border: 1px solid #f4f7f9;
+    /*border-color: #f4f7f9;*/
+    padding:5px;
+	background-color:#f4f7f9;
 }
 .chatroom .input input[type=submit]{
+
 	display:inline-block;
-	background:#343d4e;
+	background:#5A5EB9;
 	border:1px solid #fff;
 	color:#fff;
 	height:30px;
@@ -206,20 +308,25 @@
 	text-overflow:ellipsis;
 	outline:none;
 	font-weight:600;
-	text-transform:uppercase
+    border-radius: 12px;
+	text-transform:uppercase;
+
+
 }
 .chatroom .input input[type=submit]:hover{
-	background:hsla(0,0%,100%,.8)
+	background:#efefef;
+    color:#000;
 }
 .chatroom #speech-input{
 	height:30px;
 	width:30px;
 	margin-left:5px;
-	background:#343d4e;
+	background:#078282FF;
 	border:1px solid #fff;
 	color:#fff;
 	border-radius:3px;
 	cursor:pointer;
+    border-radius: 12px;
 	transition:all .3s ease
 }
 .chatroom #speech-input:hover{
